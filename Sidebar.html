@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Filters Sidebar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 300px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: 100vh;git commit -m "first commit"git commit -m "first commit"
+            overflow-y: auto;
+        }
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .sidebar section {
+            margin-bottom: 20px;
+        }
+        .sidebar section h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .sidebar .filter-button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sidebar .filter-button:hover {
+            background-color: #f0f0f0;
+        }
+        .sidebar .filter-button i {
+            font-size: 16px;
+        }
+        .sidebar .filter-content {
+            display: none;
+            margin-top: 10px;
+        }
+        .sidebar .filter-content.active {
+            display: block;
+        }
+        .sidebar input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Search Sidebar</h2>
+        <div>2,436 jobs matched</div>
+        <button class="filter-button" onclick="clearFilters()">Clear filters</button>
+        
+        <section>
+            <h3>Locations</h3>
+            <button class="filter-button" onclick="toggleFilter('locationFilter')">
+                <span>Select location</span>
+                <i class="arrow">▼</i>
+            </button>
+            <div id="locationFilter" class="filter-content">
+                <input type="text" placeholder="Search locations">
+            </div>
+        </section>
+        
+        <section>
+            <h3>Experience</h3>
+            <button class="filter-button" onclick="toggleFilter('experienceFilter')">
+                <span>Select experience</span>
+                <i class="arrow">▼</i>
+            </button>
+            <div id="experienceFilter" class="filter-content">
+                <input type="text" placeholder="Search experience">
+            </div>
+        </section>
+        
+        <section>
+            <h3>Skills and Qualifications</h3>
+            <button class="filter-button" onclick="toggleFilter('skillsFilter')">
+                <span>Select skills</span>
+                <i class="arrow">▼</i>
+            </button>
+            <div id="skillsFilter" class="filter-content">
+                <input type="text" placeholder="Search skills">
+            </div>
+        </section>
+        
+        <section>
+            <h3>Degree</h3>
+            <button class="filter-button" onclick="toggleFilter('degreeFilter')">
+                <span>Select degree</span>
+                <i class="arrow">▼</i>
+            </button>
+            <div id="degreeFilter" class="filter-content">
+                <input type="text" placeholder="Search degree">
+            </div>
+        </section>
+        
+        <section>
+            <h3>Job Types</h3>
+            <button class="filter-button" onclick="toggleFilter('jobTypesFilter')">
+                <span>Select job types</span>
+                <i class="arrow">▼</i>
+            </button>
+            <div id="jobTypesFilter" class="filter-content">
+                <input type="text" placeholder="Search job types">
+            </div>
+        </section>
+        
+        <section>
+            <h3>Organizations</h3>
+            <button class="filter-button" onclick="toggleFilter('organizationsFilter')">
+                <span>Select organizations</span>
+                <i class="arrow">▼</i>
+            </button>
+            <div id="organizationsFilter" class="filter-content">
+                <input type="text" placeholder="Search organizations">
+            </div>
+        </section>
+        
+        <section>
+            <h3>Sort By</h3>
+            <button class="filter-button" onclick="toggleFilter('sortByFilter')">
+                <span>Sort by date or relevance</span>
+                <i class="arrow">▼</i>
+            </button>
+            <div id="sortByFilter" class="filter-content">
+                <input type="text" placeholder="Sort by">
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleFilter(filterId) {
+            const filterContent = document.getElementById(filterId);
+            filterContent.classList.toggle('active');
+        }
+
+        function clearFilters() {
+            document.querySelectorAll('.filter-content').forEach(content => content.classList.remove('active'));
+            document.querySelectorAll('input[type="text"]').forEach(input => input.value = '');
+        }
+    </script>
+</body>
+</html>

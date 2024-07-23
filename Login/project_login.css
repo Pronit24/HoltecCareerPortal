@@ -1,0 +1,91 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: linear-gradient(to bottom, #143253, #ffff);
+}
+.card{
+    border: 0;
+    border-radius: 20px;
+}
+.mid{
+    height: 769px;
+    width: 700px;
+    /* background-color: #1ed760; */
+    background-color: transparent;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+.icon {
+    margin: auto;
+    height: 100px;
+    width: 400px;
+    border: 0px solid coral;
+    position: relative;
+}
+.logo_image{
+    width:400px; 
+    height:200px;
+    /* object-fit: cover; */
+    position: absolute;
+    top: -60px;
+}
+.fa-spotify{
+    font-size: 90px;
+    margin-top: 10px;
+    margin-left: 7px;
+}
+.logbtn{
+    margin-left: 200px;
+    border-radius: 30px;
+    width: 260px;
+    height: 60px;
+    border-color: gray;
+}
+.logbtn:hover{
+    background-color: #121212;
+    color: aliceblue;
+}
+.card-header, .card-body, .card-footer{
+    /* background-color: #121212; */
+    background-color: transparent;
+    color: aliceblue;
+    border: 0 solid blueviolet;
+}
+
+.fields{
+    width: 300px;
+}
+.email{
+    margin-left: 185px;
+}
+.inp{
+    background-color: #ffff;
+    border-color: #4e4e4e;
+    
+}
+.loginbtn{
+    background-color: #143253;
+    width: 300px;
+    border-radius: 20px;
+    color: white;
+}
+.forget_password{
+    color: aliceblue;
+}
+.forget_password:hover{
+    color: #143253;
+}
+.final{
+    height: 60px;
+    width: 100%;
+    background-color: #000;
+    color: gray;
+    text-align: center;
+    padding-top: 20px;
+}
+.finallink{
+    color: gray;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Holtec Music</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="project_signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Hide the default radio button */
+        .custom-radio {
+            display: none;
+        }
+
+        /* Create a custom radio button */
+        .custom-radio + label::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #143253;
+            background-color: transparent;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Style the checked state */
+        .custom-radio:checked + label::before {
+            background-color: #143253;
+            border-color: #143253;
+        }
+    </style>
+</head>
+<body>
+    <div class="card main" align="center" id="initialStep">
+        <div class="card-header">
+            <div class="icon">
+                <img src="/Images/image-holtec-final.png" class="logo_image" align="center" alt="">
+            </div>
+                <br>
+                <p class="display-4" align="center">Sign up to start your career at Holtec</p>
+                <br>
+                <form>
+                    <div class="col">
+                        <p style="text-align: left;" class="email"><strong>Enter your username</strong></p>
+                        <input type="text" placeholder="Username" class="form-control fields inp">
+                        <br>
+                        <p style="text-align: left;" class="email"><strong>Enter your name</strong></p>
+                        <input type="text" placeholder="Full Name" class="form-control fields inp">
+                        <br>
+                        <p style="text-align: left;" class="email"><strong>Enter your email</strong></p>
+                        <input type="email" placeholder="name@domain.com" class="form-control fields inp">
+                        <br>
+                        <p style="text-align: left;" class="email"><strong>Password</strong></p>
+                        <div class="form-group">
+                            <input type="password" id="password" placeholder="Enter your password" class="form-control fields inp">
+                            <button type="button" class="toggle-visibility" onclick="togglePasswordVisibility()">👁️</button>
+                        </div>
+                        <label for="requirements">Your password must contain atleast</label>
+                    <ul class="requirements">
+                        <li>1 letter</li>
+                        <li>1 number or special character (example: # ? ! &)</li>
+                        <li>10 characters</li>
+                    </ul>
+                        <p style="text-align: left;" class="email"><strong>Enter your Mobile Number</strong></p>
+                        <input type="number" id="password" placeholder="Enter your Mobile" class="form-control fields inp">
+                        <br>
+                        <p style="text-align: left;" class="email"><strong>Gender</strong></p>
+                    <div class="form-group">
+                        <input type="radio" id="gender-man" name="gender" value="Man" class="custom-radio">
+                        <label for="gender-man">Man</label>
+                        <input type="radio" id="gender-woman" name="gender" value="Woman" class="custom-radio">
+                        <label for="gender-woman">Woman</label>
+                        <!-- <input type="radio" id="gender-notsay" name="gender" value="Prefer not to say" class="custom-radio">
+                        <label for="gender-notsay">Prefer not to say</label> -->
+                    </div>
+                    <br>
+                    <p style="text-align: left;" class="email"><strong>Date of birth</strong></p>
+                    <div class="form-group">
+                        <input type="number" placeholder="yyyy" class="form-control fields inp" style="width: 100px; display: inline;">
+                        <select class="form-control fields inp" style="width: 100px; display: inline;">
+                            <option value="" disabled selected>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <input type="number" placeholder="dd" class="form-control fields inp" style="width: 50px; display: inline;">
+                    </div>
+                        <br>
+                        <button type="submit" class="btn loginbtn"><strong><a href="/ProfileInfoPage/profile.html" style="color: #fff;">Sign Up</a></strong></button>
+                        <!-- button type submit se normal button kiya -->
+                    </div>
+                </form>
+            <br>
+            <div class="line"></div>
+            <br>
+            <br>
+            <p style="color: black;">Already have an account? 
+                <a href="project_login.html" class="forget_password">Log in here</a>
+            </p>
+            <br>
+            <div class="final">
+                <p>This site is protected by reCAPTCHA and the Google <a href="" class="finallink">Privacy Policy</a> and <a href="" class="finallink">Terms of Service</a> apply.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    function togglePasswordVisibility() {
+    const passwordInput = document.getElementById('password');
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    }
+    </script>
+</body>
+</html>

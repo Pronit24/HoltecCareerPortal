@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Portal</title>
+    <link href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #134253, #F2E9E4);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-holtec img {
+            height: 80px;
+            cursor: pointer;
+        }
+
+        .navbar-nav .nav-item {
+            
+            margin: 0 15px;
+        }
+
+        .navbar-nav .nav-link {
+            
+            color: #fff;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .profile-circle {
+            margin-right: 30px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .profile-circle:hover {
+            border-color: black;
+            color: white;
+        }
+
+        .search-icon {
+            font-size: 20px;
+            color: white;
+            margin-right: 40px;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+
+        .white-transition-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .white-transition-section h3 {
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+
+        .white-transition-section p {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .footer {
+            color: black;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: black;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .body {
+            height: 600px;
+        }
+
+        .quote {
+            font-size: 80px;
+            text-align: center;
+            padding-top: 10%;
+        }
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .slider {
+            display: flex;
+            margin-left: 10%;
+            width: 200px;
+            height: 300px;
+            transition: transform 0.3s ease-in-out;
+            cursor: grab;
+        }
+
+        .h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .slide {
+            min-width: 300px;
+            max-width: 300px;
+            margin-right: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .slide-caption {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .slide-caption h3 {
+            font-size: 19px;
+            margin: 0 0 10px;
+            color: black;
+        }
+
+        .slide-caption p {
+            font-size: 14.4px;
+            margin: 0;
+            color: black;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .working-at-holtec {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .working-at-holtec h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .working-at-holtec .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        
+        .working-at-holtec .image-card {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .working-at-holtec .image-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .working-at-holtec .image-card .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .working-at-holtec .image-card .overlay:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .working-at-holtec .overlay h3 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .working-at-holtec .overlay p {
+            font-size: 16px;
+            margin: 5px 0 10px;
+        }
+
+        .working-at-holtec .overlay a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .working-at-holtec .overlay a:hover {
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    
+        <a class="navbar-holtec" href="#">
+            <img src="/holtecasia.png" alt="">
+        </a>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/HomePage/homepg.html" style="color: #fff;">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/UserJobPage/UserJobPage.html" style="color: #fff;">Careers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <i class="fas fa-search search-icon"></i>
+        <div class="profilecircle">
+            <a href="/ProfilePg/ProfilePg/HoltecProfile.html" class="profile-circle">
+                <span>SS</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="body">
+        <!-- <img src="/images/bg.jpg" alt="" style="width: 100%; height: auto; position: absolute;"> -->
+        <div class="quote">
+            Join the team where teach meets heart
+
+        </div>
+        <br><br><br>
+        <div class="slider-container">
+            <p class="featured-josbs" style="margin-left: 150px;">Featured jobs</p>
+            <div class="slider">
+                <div class="slide">
+                    <img src="/images/sde.PNG" alt="">
+                    <div class="slide-caption">
+                        <h3>Software Engineer, Full Stack, Holtec</h3>
+                        <p>Pune, Maharasta, India</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/images/sde1.PNG" alt="">
+                    <div class="slide-caption">
+                        <h3>Holtec AI roles</h3>
+                        <p>Search our new roles in artificial intelligence and machine learning.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/images/sde3.PNG" alt="">
+                    <div class="slide-caption">
+                        <h3>Software Engineer, Mobile (Android), Holtec</h3>
+                        <p>Pune, Maharasta, India</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/images/sde4.PNG" alt="">
+                    <div class="slide-caption">
+                        <h3>Senior Software Engineer, Full Stack, Holtec</h3>
+                        <p>Pune, Maharasta, India</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <br><br> <br> <br> <br> <br>
+    <div class="white-transition-section">
+        <div class="container1">
+            <h1 class="h1" style="font-weight: 700;"></h1>
+            <h4 class="h4" style="font-size: 80px; text-align: center;">Join a team and <br>inspire the work.</h4>
+
+            <p style="font-size: 30px;">Discover how you can make an impact: see our <br>areas of work, worldwide
+                locations and <br> opportunities for students.</p>
+
+            <p><a href="">Learn about work at Holtec></a></p>
+        </div>
+
+        <div class="working-at-holtec">
+            <h2>Working at Holtec</h2>
+            <div class="image-container">
+                <div class="image-card">
+                    <img src="/images/bg.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Learn how we're building a more diverse and inclusive Holtec</h3>
+                        <a href="#">Read about our efforts →</a>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/team.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Our commitment to hiring people with excellemcy</h3>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Copyright © 2024 Holtec Inc. All rights reserved.
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Use</a> |
+                <a href="#">Sales Policy</a> |
+                <a href="#">Legal</a> |
+                <a href="#">Site Map</a>
+            </p>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- <script src="/bootstrap-5.3.3-dist/css/bootstrap.min.css"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+        <script>
+
+            const slider = document.querySelector('.slider');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+
+            slider.addEventListener('mousedown', (e) => {
+                isDown = true;
+                slider.classList.add('active');
+                startX = e.pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                isDown = false;
+                slider.classList.remove('active');
+            });
+
+            slider.addEventListener('mouseup', () => {
+                isDown = false;
+                slider.classList.remove('active');
+            });
+
+            slider.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - slider.offsetLeft;
+                const walk = (x - startX) * 3;
+                slider.scrollLeft = scrollLeft - walk;
+            });
+        </script>
+
+</body>
+
+</html>

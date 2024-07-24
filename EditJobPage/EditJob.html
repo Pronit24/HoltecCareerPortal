@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Job Opening</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        html,
+        body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #134253, #F2E9E4);
+        }
+
+        .container {
+            padding: 50px;
+            width: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            max-width: 800px;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            padding: 10px 20px;
+            position: absolute;
+            top: 0;
+        }
+
+        .navbar .logo img {
+            height: 40px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: #fdfbfb;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #1a73e8;
+        }
+
+        .navbar .cta {
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .navbar .cta:hover {
+            background-color: #1558b0;
+        }
+
+        .dp {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        /* Technology Badge Styles */
+        .tech-badge {
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            color: black;
+        }
+
+        /* Stage Styles */
+        .stage {
+            color: #000000;
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #technologies {
+            max-width: 600px;
+        }
+
+        .delete-stage {
+            padding: 0 6px;
+            font-size: 14px;
+            line-height: 1;
+            color: #fff;
+        }
+
+        .bg-custom-pink {
+            background-color: #fff;
+        }
+
+        .btn-custom-pink {
+            background-color: #fff;
+        }
+
+        /* Add Button Styles */
+        #addTechBtn,
+        #addStageBtn {
+            width: 100%;
+        }
+
+        /* Input Container Styles */
+        #newTechInputContainer,
+        #newStageInputContainer {
+            background-color: #78abcf;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #cancel {
+            background-color: #b86464;
+        }
+
+        #cancel:hover {
+            background-color: #a14e4e;
+        }
+
+        #create {
+            color: #ffffff;
+            background-color: #3e834b;
+        }
+
+        #create:hover {
+            color: #ffffff;
+            background-color: #346d3f;
+        }
+
+        #addTechBtn:hover {
+            background-color: #3e834b;
+        }
+
+        #addStageBtn:hover {
+            background-color: #3e834b;
+        }
+
+        .dp {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .navbar-holtec img {
+            height: 70px !important;
+            width: 90px !important;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .navbar .nav-links a {
+                padding: 10px 0;
+                width: 100%;
+                text-align: center;
+                border-top: 1px solid #e0e0e0;
+            }
+
+            .navbar .nav-links a:first-child {
+                border-top: none;
+            }
+
+            .navbar .cta {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/HomePage/homepg.html"><img src="/ProfilePg/ProfilePg/images/1.png" alt="Company Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="#jobs">Jobs</a>
+            <a href="#teams">Teams</a>
+            <a href="#locations">Locations</a>
+            <a href="#life">Life at Company</a>
+        </div>
+        <img src="/Images/dp.png" class="dp" alt="">
+    </nav>
+    <div class="container m-5">
+        <div class="card w-100 p-4">
+            <h2>Edit Job Opening</h2>
+            <form>
+                <!-- Job Role Input -->
+                <div class="mb-3">
+                    <label for="vacancyName" class="form-label">Job Role:</label>
+                    <input type="text" class="form-control" id="vacancyName" value="" placeholder="Enter job role">
+                </div>
+
+                <!-- Job Description Input -->
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description:</label>
+                    <textarea class="form-control" id="description" rows="3"
+                        placeholder="Enter job description in brief"></textarea>
+                </div>
+
+                <!-- Technologies Section -->
+                <div class="mb-3">
+                    <label class="form-label"><strong>Technologies:</strong></label>
+                    <div id="technologies">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="PHP" id="techPHP">
+                            <label class="form-check-label" for="techPHP">PHP</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Symfony" id="techSymfony">
+                            <label class="form-check-label" for="techSymfony">Symfony</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="jQuery" id="techJQuery">
+                            <label class="form-check-label" for="techJQuery">jQuery</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Elastic Search"
+                                id="techElasticSearch">
+                            <label class="form-check-label" for="techElasticSearch">Elastic Search</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="JavaScript" id="techJavaScript">
+                            <label class="form-check-label" for="techJavaScript">JavaScript</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="MySQL" id="techMySQL">
+                            <label class="form-check-label" for="techMySQL">MySQL</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="PostgreSQL" id="techPostgreSQL">
+                            <label class="form-check-label" for="techPostgreSQL">PostgreSQL</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stages Section -->
+                <div class="mb-3">
+                    <label class="form-label">Stages:</label>
+                    <div id="stages">
+                        <!-- Existing stages -->
+                        <div class="stage">Screening</div>
+                        <div class="stage">Phone Interview</div>
+                        <div class="stage">Interview</div>
+                        <div class="stage">Test</div>
+                        <div class="stage">Offer</div>
+                    </div>
+                    <!-- Add Stage Button -->
+                    <div class="mt-2">
+                        <button type="button" class="btn btn-outline-dark" id="addStageBtn">
+                            <i class="bi bi-plus"></i> Add Stage
+                        </button>
+                    </div>
+                    <!-- New Stage Input Container -->
+                    <div class="mt-2 d-none" id="newStageInputContainer">
+                        <input type="text" class="form-control" id="newStageInput" placeholder="Enter new stage">
+                        <div class="mt-2">
+                            <button type="button" class="btn btn-primary me-2" id="confirmStageBtn">Confirm</button>
+                            <button type="button" class="btn btn-secondary" id="cancelStageBtn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Submission Buttons -->
+                <button type="button" class="btn btn-custom-pink" id="create">Create</button>
+                <button type="button" class="btn btn-secondary" id="cancel">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Requirements Section
+            const techContainer = document.getElementById('technologies');
+            const addTechBtn = document.getElementById('addTechBtn');
+            const newTechInputContainer = document.getElementById('newTechInputContainer');
+            const newTechInput = document.getElementById('newTechInput');
+            const confirmTechBtn = document.getElementById('confirmTechBtn');
+            const cancelTechBtn = document.getElementById('cancelTechBtn');
+
+            // Array of Bootstrap color classes for technology badges
+            const colors = ['bg-custom-pink'];
+
+            // Function to create a new technology badge
+            function createTechBadge(techName) {
+                const techBadge = document.createElement('span');
+                techBadge.className = `badge tech-badge ${colors[Math.floor(Math.random() * colors.length)]}`;
+                techBadge.textContent = techName;
+                techBadge.addEventListener('click', function () {
+                    this.remove();
+                });
+                return techBadge;
+            }
+
+            // Make existing technology badges removable
+            techContainer.querySelectorAll('.tech-badge').forEach(badge => {
+                badge.addEventListener('click', function () {
+                    this.remove();
+                });
+            });
+
+            // Show technology input when add button is clicked
+            addTechBtn.addEventListener('click', function () {
+                addTechBtn.classList.add('d-none');
+                newTechInputContainer.classList.remove('d-none');
+                newTechInput.focus();
+            });
+
+            // Function to add a new technology
+            function addNewTech() {
+                const techName = newTechInput.value.trim();
+                if (techName) {
+                    techContainer.appendChild(createTechBadge(techName));
+                    newTechInput.value = '';
+                }
+                newTechInputContainer.classList.add('d-none');
+                addTechBtn.classList.remove('d-none');
+            }
+
+            // Add new technology when confirm button is clicked
+            confirmTechBtn.addEventListener('click', addNewTech);
+
+            // Add new technology when Enter key is pressed
+            newTechInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    addNewTech();
+                }
+            });
+
+            // Cancel adding new technology
+            cancelTechBtn.addEventListener('click', function () {
+                newTechInputContainer.classList.add('d-none');
+                addTechBtn.classList.remove('d-none');
+                newTechInput.value = '';
+            });
+
+            // Stages Section
+            const stagesContainer = document.getElementById('stages');
+            const addStageBtn = document.getElementById('addStageBtn');
+            const newStageInputContainer = document.getElementById('newStageInputContainer');
+            const newStageInput = document.getElementById('newStageInput');
+            const confirmStageBtn = document.getElementById('confirmStageBtn');
+            const cancelStageBtn = document.getElementById('cancelStageBtn');
+
+            // Function to create delete button for stages
+            function createDeleteButton() {
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'btn btn-sm  text-dark float-end delete-stage';
+                deleteBtn.innerHTML = '×';
+                deleteBtn.addEventListener('click', function () {
+                    this.parentElement.remove();
+                });
+                return deleteBtn;
+            }
+
+            // Make existing stages deletable
+            stagesContainer.querySelectorAll('.stage').forEach(stage => {
+                stage.appendChild(createDeleteButton());
+            });
+
+            // Show stage input when add button is clicked
+            addStageBtn.addEventListener('click', function () {
+                addStageBtn.classList.add('d-none');
+                newStageInputContainer.classList.remove('d-none');
+                newStageInput.focus();
+            });
+
+            // Function to add a new stage
+            function addNewStage() {
+                const stageName = newStageInput.value.trim();
+                if (stageName) {
+                    const stageDiv = document.createElement('div');
+                    stageDiv.className = 'stage';
+                    stageDiv.textContent = stageName + ' ';
+                    stageDiv.appendChild(createDeleteButton());
+                    stagesContainer.appendChild(stageDiv);
+                    newStageInput.value = '';
+                }
+                newStageInputContainer.classList.add('d-none');
+                addStageBtn.classList.remove('d-none');
+            }
+
+            // Add new stage when confirm button is clicked
+            confirmStageBtn.addEventListener('click', addNewStage);
+
+            // Add new stage when Enter key is pressed
+            newStageInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    addNewStage();
+                }
+            });
+
+            // Cancel adding new stage
+            cancelStageBtn.addEventListener('click', function () {
+                newStageInputContainer.classList.add('d-none');
+                addStageBtn.classList.remove('d-none');
+                newStageInput.value = '';
+            });
+        });
+    </script>
+</body>
+
+</html>

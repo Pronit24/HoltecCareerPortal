@@ -1,0 +1,239 @@
+/* Profile Section Styles */
+#profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    height: 90vh;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #f0f2f5 100%);
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    margin-top: 17px;
+}
+
+.sidebar .profile {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar .profile img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar .profile h3 {
+    margin: 10px 0 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(217, 83, 79, 0.1);
+    color: #d9534f;
+    transform: translateX(5px);
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.dashboard {
+    height: 90vh;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-left: 5px solid #d9534f;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1), 0 8px 8px rgba(0,0,0,0.15);
+}
+
+.stat-box span {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#d9534f, #f0ad4e);
+    background: linear-gradient(#d9534f, #f0ad4e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.stat-box p {
+    margin: 5px 0 0;
+    color: #777;
+}
+
+.recent-job {
+    margin-top: 20px;
+}
+
+.recent-job h3 {
+    margin: 0 0 10px;
+}
+
+.job-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1), 0 8px 8px rgba(0,0,0,0.15);
+}
+
+.job-header {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.job-badges {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.full-time {
+    background-image: linear-gradient(to right, #00b09b, #96c93d);
+}
+
+.featured {
+    background-image: linear-gradient(to right, #f46b45, #eea849);
+}
+
+.job-header h4 {
+    margin: 0 0 5px;
+}
+
+.job-header p {
+    margin: 2px 0;
+    color: #777;
+}
+
+.job-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #333;
+}
+
+.job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.job-footer p {
+    margin: 2px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.job-details-btn {
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.job-details-btn:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 8px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.job-details-btn:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+.job-details-btn:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
